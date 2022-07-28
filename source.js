@@ -5,29 +5,10 @@ var cardState;
 var currentQuestion=0;
 var qbank=new Array;
 
-loadDB({"questionlist":[
-{"cardfront":"CAT",
-"cardback":"GATO"
-},
-{"cardfront":"DOG",
-"cardback":"PERRO"
-},
-{"cardfront":"HORSE",
-"cardback":"CABALLO"
-},
-{"cardfront":"RABBIT",
-"cardback":"CONEJO"
-},
-{"cardfront":"TIGER",
-"cardback":"TIGRE"
-},
-{"cardfront":"KANGAROO",
-"cardback":"CANGURO"
-}
-]});
+loadDB();
 
 function loadDB(){
- $.getJSON("activity.json", function(data) {
+ $.getJSON("https://cdn.jsdelivr.net/gh/geniuscreator0/FLashcard-Code@d41336526ecf307608bae50b1fcbcc049b783360/activity.json", function(data) {
   for(i=0;i<data.questionlist.length;i++){
    qbank[i]=[];
    qbank[i][0]=data.questionlist[i].cardfront;

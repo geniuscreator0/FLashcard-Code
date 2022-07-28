@@ -8,7 +8,7 @@ var qbank=new Array;
 loadDB();
 
 function loadDB(){
- $.getJSON("https://cdn.jsdelivr.net/gh/geniuscreator0/FLashcard-Code@d41336526ecf307608bae50b1fcbcc049b783360/activity.json", function(data) {
+ $.getJSON("https://cdn.jsdelivr.net/gh/geniuscreator0/FLashcard-Code@38719667bf482330951c9d66a865a34d8738f3a7/activity.json", function(data) {
   for(i=0;i<data.questionlist.length;i++){
    qbank[i]=[];
    qbank[i][0]=data.questionlist[i].cardfront;
